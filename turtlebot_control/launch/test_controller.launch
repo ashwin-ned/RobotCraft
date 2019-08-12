@@ -1,0 +1,17 @@
+<launch>
+
+	<node pkg="turtlesim" type="turtlesim_node" name="turtlesim" output="screen"/>
+
+	<node pkg="turtlebot_control" type="basic_controller" name="controller_1" output="screen">
+		<remap from="cmd_vel" to="turtle1/cmd_vel"/>
+		<param name="linear_vel" value="1.0"/>
+		<param name="angular_vel" value="1.0"/>
+	</node>
+
+	<node pkg="turtlebot_control" type="basic_controller" name="controller_2" output="screen">
+		<remap from="cmd_vel" to="Jeff/cmd_vel"/>
+		<param name="linear_vel" value="1.0"/>
+		<param name="angular_vel" value="1.0"/>
+	</node>
+
+</launch>
